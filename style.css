@@ -64,13 +64,23 @@ img {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 21px;
   font-weight: 800;
   letter-spacing: -0.05em;
 }
 
+.logo img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
 .logo span {
-  color: #777;
+  color: var(--black);
 }
 
 nav {
@@ -362,6 +372,11 @@ h2 {
   object-position: center;
   object-fit: cover;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-image img:hover {
+  transform: scale(1.03);
 }
 
 .project-image span {
@@ -403,7 +418,9 @@ h2 {
 }
 
 
-/* ARDUINO */
+/* =========================
+   ARDUINO
+========================= */
 
 .arduino-project .project-image {
   background: var(--soft);
@@ -594,6 +611,16 @@ footer {
 
   .nav-button {
     display: none;
+  }
+
+  .logo {
+    gap: 6px;
+    font-size: 20px;
+  }
+
+  .logo img {
+    width: 22px;
+    height: 22px;
   }
 
   .hero {
